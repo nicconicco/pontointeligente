@@ -6,6 +6,12 @@ import org.springframework.validation.BindingResult
 import org.springframework.validation.ObjectError
 import org.springframework.web.bind.annotation.*
 import javax.validation.Valid
+import com.nicconicco.pontointeligente.services.*
+import com.nicconicco.pontointeligente.documents.*
+import com.nicconicco.pontointeligente.repositories.*
+import com.nicconicco.pontointeligente.response.*
+import com.nicconicco.pontointeligente.dtos.*
+import com.nicconicco.pontointeligente.util.SenhaUtils
 
 @RestController
 @RequestMapping("/api/funcionarios")

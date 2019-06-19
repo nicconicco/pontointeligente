@@ -1,6 +1,8 @@
 package com.nicconicco.pontointeligente.services
 
-
+import com.nicconicco.pontointeligente.services.*
+import com.nicconicco.pontointeligente.documents.*
+import com.nicconicco.pontointeligente.repositories.*
 
 interface EmpresaService {
 

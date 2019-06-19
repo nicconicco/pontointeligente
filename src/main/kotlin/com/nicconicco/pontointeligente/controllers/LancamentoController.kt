@@ -1,12 +1,11 @@
 package com.nicconicco.pontointeligente.controllers
 
-import com.kazale.pontointeligente.api.pontointeligenteapi.documents.Funcionario
-import com.kazale.pontointeligente.api.pontointeligenteapi.documents.Lancamento
-import com.kazale.pontointeligente.api.pontointeligenteapi.dtos.LancamentoDto
-import com.kazale.pontointeligente.api.pontointeligenteapi.enums.TipoEnum
-import com.kazale.pontointeligente.api.pontointeligenteapi.response.Response
-import com.kazale.pontointeligente.api.pontointeligenteapi.services.FuncionarioService
-import com.kazale.pontointeligente.api.pontointeligenteapi.services.LancamentoService
+import com.nicconicco.pontointeligente.services.*
+import com.nicconicco.pontointeligente.documents.*
+import com.nicconicco.pontointeligente.repositories.*
+import com.nicconicco.pontointeligente.response.*
+import com.nicconicco.pontointeligente.dtos.*
+import com.nicconicco.pontointeligente.util.SenhaUtils
 import org.springframework.beans.factory.annotation.Value
 import org.springframework.data.domain.Page
 import org.springframework.data.domain.PageRequest
