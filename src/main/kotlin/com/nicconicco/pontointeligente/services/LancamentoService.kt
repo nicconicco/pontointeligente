@@ -1,17 +1,17 @@
-package com.nicconicco.pontointeligente.services
+package com.kazale.pontointeligente.api.pontointeligenteapi.services
 
-import com.nicconicco.pontointeligente.documents.Funcionario
-import com.nicconicco.pontointeligente.documents.Lancamento
+import com.kazale.pontointeligente.api.pontointeligenteapi.documents.Lancamento
 import org.springframework.data.domain.Page
 import org.springframework.data.domain.PageRequest
 
 interface LancamentoService {
 
-    fun buscarPorFuncionarioId(funcioarioId: String, pageRequest: PageRequest) : Page<Lancamento>
+    fun buscarPorFuncionarioId(funcionarioId: String, pageRequest: PageRequest): Page<Lancamento>
 
-    fun buscarPorId(id: String) : Lancamento?
+    fun buscarPorId(id: String): Lancamento?
 
-    fun persistir(lancamento: Lancamento) : Lancamento
+    fun persistir(lancamento: Lancamento): Lancamento
 
-    fun remover(lancamento: Lancamento)
+    fun remover(id: String)
+
 }

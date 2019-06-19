@@ -1,14 +1,15 @@
-package com.nicconicco.pontointeligente.services.impl
+package com.kazale.pontointeligente.api.pontointeligenteapi.services.impl
 
-import com.nicconicco.pontointeligente.documents.Empresa
-import com.nicconicco.pontointeligente.repositories.EmpresaRepository
-import com.nicconicco.pontointeligente.services.EmpresaService
+import com.kazale.pontointeligente.api.pontointeligenteapi.documents.Empresa
+import com.kazale.pontointeligente.api.pontointeligenteapi.repositories.EmpresaRepository
+import com.kazale.pontointeligente.api.pontointeligenteapi.services.EmpresaService
 import org.springframework.stereotype.Service
 
 @Service
-class EmpresaServiceImpl(val empresaRepository: EmpresaRepository) : EmpresaService {
+class EmpresaServiceImpl (val empresaRepository: EmpresaRepository) : EmpresaService {
 
-    override fun buscarPorCnpj(cnpj: String): Empresa? = empresaRepository.findByCnpj(cnpj)
+    override fun buscarPorCnpj(cnpj: String) = empresaRepository.findByCnpj(cnpj)
 
-    override fun persistir(empresa: Empresa): Empresa = empresaRepository.save(empresa)
+    override fun persistir(empresa: Empresa) = empresaRepository.save(empresa)
+
 }

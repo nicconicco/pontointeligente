@@ -1,14 +1,15 @@
-package com.nicconicco.pontointeligente.services
+package com.kazale.pontointeligente.api.pontointeligenteapi.services
 
-import com.nicconicco.pontointeligente.documents.Funcionario
+import com.kazale.pontointeligente.api.pontointeligenteapi.documents.Funcionario
 
 interface FuncionarioService {
 
-    fun buscarPorCnpj(cnpj: String) : Funcionario?
+    fun persistir(funcionario: Funcionario): Funcionario
 
-    fun buscarPorEmail(email: String) : Funcionario?
+    fun buscarPorCpf(cpf: String): Funcionario?
 
-    fun persistir(funcioario: Funcionario) : Funcionario
+    fun buscarPorEmail(email: String): Funcionario?
 
-    fun buscarPorId(id: String) : Funcionario?
+    fun buscarPorId(id: String): Funcionario?
+
 }

@@ -1,8 +1,11 @@
-package com.nicconicco.pontointeligente.services
+package com.kazale.pontointeligente.api.pontointeligenteapi.services
 
-import com.nicconicco.pontointeligente.documents.Empresa
+import com.kazale.pontointeligente.api.pontointeligenteapi.documents.Empresa
 
 interface EmpresaService {
-    fun buscarPorCnpj(cnpj: String) : Empresa?
-    fun persistir(empresa: Empresa) : Empresa
+
+    fun buscarPorCnpj(cnpj: String): Empresa?
+
+    fun persistir(empresa: Empresa): Empresa
+
 }

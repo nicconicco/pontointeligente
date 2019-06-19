@@ -5,6 +5,7 @@ import com.nicconicco.pontointeligente.documents.Funcionario
 import com.nicconicco.pontointeligente.enums.PerfilEnum
 import com.nicconicco.pontointeligente.repositories.EmpresaRepository
 import com.nicconicco.pontointeligente.repositories.FuncionarioRepository
+import com.nicconicco.pontointeligente.repositories.LancamentoRepository
 import com.nicconicco.pontointeligente.util.SenhaUtils
 import org.springframework.boot.CommandLineRunner
 import org.springframework.boot.SpringApplication
@@ -13,11 +14,14 @@ import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.autoconfigure.mongo.MongoAutoConfiguration
 
 @SpringBootApplication
-class PontointeligenteApplication(val empresaRepository: EmpresaRepository, val funcionarioRepository: FuncionarioRepository) : CommandLineRunner {
+class PontointeligenteApplication(val empresaRepository: EmpresaRepository,
+								  val funcionarioRepository: FuncionarioRepository,
+								  val lancamentoRepository: LancamentoRepository) : CommandLineRunner {
 
 	override fun run(vararg args: String?) {
 		empresaRepository.deleteAll()
 		funcionarioRepository.deleteAll()
+		lancamentoRepository.deleteAll()
 
 		var empresa: Empresa = Empresa("Empresa LTDA", "35417492000108")
 		empresa = empresaRepository.save(empresa)
