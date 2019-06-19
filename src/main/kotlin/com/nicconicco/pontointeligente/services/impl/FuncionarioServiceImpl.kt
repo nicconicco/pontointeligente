@@ -1,8 +1,5 @@
-package com.kazale.pontointeligente.api.pontointeligenteapi.services.impl
+package com.nicconicco.pontointeligente.services.impl
 
-import com.kazale.pontointeligente.api.pontointeligenteapi.documents.Funcionario
-import com.kazale.pontointeligente.api.pontointeligenteapi.repositories.FuncionarioRepository
-import com.kazale.pontointeligente.api.pontointeligenteapi.services.FuncionarioService
 import org.springframework.stereotype.Service
 
 @Service

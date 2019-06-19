@@ -1,15 +1,6 @@
 package com.kazale.pontointeligente.api.pontointeligenteapi.controllers
 
-import com.fasterxml.jackson.core.JsonProcessingException
-import com.fasterxml.jackson.databind.ObjectMapper
-import com.kazale.pontointeligente.api.pontointeligenteapi.documents.Funcionario
-import com.kazale.pontointeligente.api.pontointeligenteapi.documents.Lancamento
-import com.kazale.pontointeligente.api.pontointeligenteapi.dtos.LancamentoDto
-import com.kazale.pontointeligente.api.pontointeligenteapi.enums.PerfilEnum
-import com.kazale.pontointeligente.api.pontointeligenteapi.enums.TipoEnum
-import com.kazale.pontointeligente.api.pontointeligenteapi.services.FuncionarioService
-import com.kazale.pontointeligente.api.pontointeligenteapi.services.LancamentoService
-import com.kazale.pontointeligente.api.pontointeligenteapi.utils.SenhaUtils
+
 import org.junit.Test
 import org.junit.runner.RunWith
 import org.mockito.BDDMockito

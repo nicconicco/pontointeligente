@@ -1,8 +1,6 @@
-package com.kazale.pontointeligente.api.pontointeligenteapi.services.impl
+package com.nicconicco.pontointeligente.services.impl
 
-import com.kazale.pontointeligente.api.pontointeligenteapi.documents.Empresa
-import com.kazale.pontointeligente.api.pontointeligenteapi.repositories.EmpresaRepository
-import com.kazale.pontointeligente.api.pontointeligenteapi.services.EmpresaService
+
 import org.springframework.stereotype.Service
 
 @Service

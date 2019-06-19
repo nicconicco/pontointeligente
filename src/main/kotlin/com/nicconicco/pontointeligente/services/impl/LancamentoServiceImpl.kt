@@ -1,8 +1,5 @@
-package com.kazale.pontointeligente.api.pontointeligenteapi.services.impl
+package com.nicconicco.pontointeligente.services.impl
 
-import com.kazale.pontointeligente.api.pontointeligenteapi.documents.Lancamento
-import com.kazale.pontointeligente.api.pontointeligenteapi.repositories.LancamentoRepository
-import com.kazale.pontointeligente.api.pontointeligenteapi.services.LancamentoService
 import org.springframework.data.domain.PageRequest
 import org.springframework.stereotype.Service
 

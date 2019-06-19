@@ -1,4 +1,4 @@
-package com.kazale.pontointeligente.api.pontointeligenteapi.controllers
+package com.nicconicco.pontointeligente.controllers
 
 import com.kazale.pontointeligente.api.pontointeligenteapi.documents.Funcionario
 import com.kazale.pontointeligente.api.pontointeligenteapi.documents.Lancamento

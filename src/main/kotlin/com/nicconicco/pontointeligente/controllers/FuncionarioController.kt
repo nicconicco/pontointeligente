@@ -1,10 +1,6 @@
-package com.kazale.pontointeligente.api.pontointeligenteapi.controllers
+package com.nicconicco.pontointeligente.controllers
 
-import com.kazale.pontointeligente.api.pontointeligenteapi.documents.Funcionario
-import com.kazale.pontointeligente.api.pontointeligenteapi.dtos.FuncionarioDto
-import com.kazale.pontointeligente.api.pontointeligenteapi.response.Response
-import com.kazale.pontointeligente.api.pontointeligenteapi.services.FuncionarioService
-import com.kazale.pontointeligente.api.pontointeligenteapi.utils.SenhaUtils
+
 import org.springframework.http.ResponseEntity
 import org.springframework.validation.BindingResult
 import org.springframework.validation.ObjectError

@@ -1,6 +1,6 @@
-package com.kazale.pontointeligente.api.pontointeligenteapi.services
+package com.nicconicco.pontointeligente.services
 
-import com.kazale.pontointeligente.api.pontointeligenteapi.documents.Empresa
+
 
 interface EmpresaService {
 
