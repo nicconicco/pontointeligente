@@ -14,6 +14,7 @@ import com.nicconicco.pontointeligente.documents.*
 import com.nicconicco.pontointeligente.repositories.*
 import com.nicconicco.pontointeligente.response.*
 import com.nicconicco.pontointeligente.dtos.*
+import com.nicconicco.pontointeligente.enums.*
 import com.nicconicco.pontointeligente.util.SenhaUtils
 
 @RestController
@@ -30,7 +31,7 @@ class CadastroPFController(val empresaService: EmpresaService,
         validarDadosExistentes(cadastroPFDto, empresa, result)
 
         if (result.hasErrors()) {
-            for (erro in result.allErrors) response.erros.add(erro.defaultMessage)
+            for (erro in result.allErrors) response.erros.add(erro.defaultMessage!!)
             return ResponseEntity.badRequest().body(response)
         }
 
@@ -61,9 +62,9 @@ class CadastroPFController(val empresaService: EmpresaService,
 
     private fun converterDtoParaFuncionario(cadastroPFDto: CadastroPFDto, empresa: Empresa) =
         Funcionario(cadastroPFDto.nome, cadastroPFDto.email,
-                SenhaUtils().gerarBCrypt(cadastroPFDto.senha), cadastroPFDto.cpf,
+                SenhaUtils().gerarBcrypt(cadastroPFDto.senha), cadastroPFDto.cpf,
                 PerfilEnum.ROLE_USUARIO, empresa.id.toString(),
-                cadastroPFDto.valorHora?.toDouble(), cadastroPFDto.qtdHorasTrabalhoDia?.toFloat(),
+                cadastroPFDto.valorHora!!.toDouble(), cadastroPFDto.qtdHorasTrabalhoDia?.toFloat(),
                 cadastroPFDto.qtdHorasAlmoco?.toFloat(), cadastroPFDto.id)
 
 

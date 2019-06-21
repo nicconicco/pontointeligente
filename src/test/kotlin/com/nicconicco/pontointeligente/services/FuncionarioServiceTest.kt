@@ -50,7 +50,7 @@ class FuncionarioServiceTest {
 
     @Test
     fun testBuscarEmpresaPorCpf() {
-        val funcionario: Funcionario? = funcionarioService?.buscarPorCnpj(CPF)
+        val funcionario: Funcionario? = funcionarioService?.buscarPorCpf(CPF)
         Assert.assertNotNull(funcionario)
     }
 

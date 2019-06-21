@@ -14,6 +14,7 @@ import com.nicconicco.pontointeligente.repositories.*
 import com.nicconicco.pontointeligente.response.*
 import com.nicconicco.pontointeligente.dtos.*
 import com.nicconicco.pontointeligente.util.SenhaUtils
+import com.nicconicco.pontointeligente.enums.*
 
 @RestController
 @RequestMapping("/api/cadastrar-pj")
@@ -27,7 +28,7 @@ class CadastroPJController(val empresaService: EmpresaService,
 
         validarDadosExistentes(cadastroPJDto, result)
         if (result.hasErrors()) {
-            for (erro in result.allErrors) response.erros.add(erro.defaultMessage)
+            for (erro in result.allErrors) response.erros.add(erro.defaultMessage!!)
             return ResponseEntity.badRequest().body(response)
         }
 
@@ -64,7 +65,7 @@ class CadastroPJController(val empresaService: EmpresaService,
 
     private fun converterDtoParaFuncionario(cadastroPJDto: CadastroPJDto, empresa: Empresa) =
         Funcionario(cadastroPJDto.nome, cadastroPJDto.email,
-                SenhaUtils().gerarBCrypt(cadastroPJDto.senha), cadastroPJDto.cpf,
+                SenhaUtils().gerarBcrypt(cadastroPJDto.senha), cadastroPJDto.cpf,
                 PerfilEnum.ROLE_ADMIN, empresa.id.toString())
 
     private fun converterCadastroPJDto(funcionario: Funcionario, empresa: Empresa): CadastroPJDto =

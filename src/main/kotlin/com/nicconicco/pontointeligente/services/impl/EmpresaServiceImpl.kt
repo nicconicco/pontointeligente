@@ -1,10 +1,8 @@
 package com.nicconicco.pontointeligente.services.impl
 
-import com.nicconicco.pontointeligente.services.*
-import com.nicconicco.pontointeligente.documents.*
-import com.nicconicco.pontointeligente.repositories.*
-import com.nicconicco.pontointeligente.response.*
-import com.nicconicco.pontointeligente.dtos.*
+import com.nicconicco.pontointeligente.documents.Empresa
+import com.nicconicco.pontointeligente.repositories.EmpresaRepository
+import com.nicconicco.pontointeligente.services.EmpresaService
 import org.springframework.stereotype.Service
 
 @Service

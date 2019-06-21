@@ -29,7 +29,7 @@ class FuncionarioController(val funcionarioService: FuncionarioService) {
         }
 
         if (result.hasErrors()) {
-            for (erro in result.allErrors) response.erros.add(erro.defaultMessage)
+            for (erro in result.allErrors) response.erros.add(erro.defaultMessage!!)
             return ResponseEntity.badRequest().body(response)
         }
 
@@ -46,12 +46,12 @@ class FuncionarioController(val funcionarioService: FuncionarioService) {
         if (funcionarioDto.senha == null) {
             senha = funcionario.senha
         } else {
-            senha = SenhaUtils().gerarBCrypt(funcionarioDto.senha)
+            senha = SenhaUtils().gerarBcrypt(funcionarioDto.senha)
         }
 
         return Funcionario(funcionarioDto.nome, funcionario.email, senha,
                 funcionario.cpf, funcionario.perfil, funcionario.empresaId,
-                funcionarioDto.valorHora?.toDouble(),
+                funcionarioDto.valorHora!!.toDouble(),
                 funcionarioDto.qtdHorasTrabalhoDia?.toFloat(),
                 funcionarioDto.qtdHorasAlmoco?.toFloat(),
                 funcionario.id)

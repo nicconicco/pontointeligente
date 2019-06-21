@@ -1,6 +1,16 @@
 package com.kazale.pontointeligente.api.pontointeligenteapi.controllers
 
 
+import com.fasterxml.jackson.core.JsonProcessingException
+import com.fasterxml.jackson.databind.ObjectMapper
+import com.nicconicco.pontointeligente.documents.Funcionario
+import com.nicconicco.pontointeligente.documents.Lancamento
+import com.nicconicco.pontointeligente.dtos.LancamentoDto
+import com.nicconicco.pontointeligente.enums.PerfilEnum
+import com.nicconicco.pontointeligente.enums.TipoEnum
+import com.nicconicco.pontointeligente.services.FuncionarioService
+import com.nicconicco.pontointeligente.services.LancamentoService
+import com.nicconicco.pontointeligente.util.SenhaUtils
 import org.junit.Test
 import org.junit.runner.RunWith
 import org.mockito.BDDMockito
@@ -119,7 +129,7 @@ class LancamentoControllerTest {
                     "Descrição", "1.243,4.345", idLancamento)
 
     private fun funcionario(): Funcionario =
-            Funcionario("Nome", "email@email.com", SenhaUtils().gerarBCrypt("123456"),
+            Funcionario("Nome", "email@email.com", SenhaUtils().gerarBcrypt("123456"),
                     "23145699876", PerfilEnum.ROLE_USUARIO, idFuncionario)
 
 }

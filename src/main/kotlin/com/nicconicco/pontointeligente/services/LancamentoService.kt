@@ -8,12 +8,11 @@ import com.nicconicco.pontointeligente.repositories.*
 
 interface LancamentoService {
 
-    fun buscarPorFuncionarioId(funcionarioId: String, pageRequest: PageRequest): Page<Lancamento>
+    fun buscarPorFuncionarioId(funcioarioId: String, pageRequest: PageRequest) : Page<Lancamento>
 
-    fun buscarPorId(id: String): Lancamento?
+    fun buscarPorId(id: String) : Lancamento?
 
-    fun persistir(lancamento: Lancamento): Lancamento
+    fun persistir(lancamento: Lancamento) : Lancamento
 
-    fun remover(id: String)
-
+    fun remover(lancamento: Lancamento)
 }
